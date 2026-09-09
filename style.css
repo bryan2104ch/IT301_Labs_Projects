@@ -1,0 +1,98 @@
+*{
+    padding:10px;
+    margin:0;
+}
+
+
+section{  
+  margin: 20px 0;
+}
+
+ul{    
+  padding-left: 40px;
+}
+
+ul ul ul {
+  margin-top: 10px;
+}
+
+/* 1. Headings */
+h1, h2{
+  color: #2a52be;
+}
+
+
+/* 2. Force 'CSS' to stay uppercase */
+span {
+  text-transform: uppercase;
+}
+
+/* 3. Paragraph styling */
+p {
+  line-height: 1.5;
+  color: #2a52be;
+}
+   
+/* 4. Section borders */
+section {
+  border: 4px solid #2a52be;
+  border-radius: 10px;
+}
+
+
+/* 5. List styling */
+li {
+  margin: 5px 0;
+}
+
+/* Main list item colors */
+ul li:nth-child(1) {
+  color: #2a52be;
+}
+
+ul li:nth-child(2) {
+  color: #228b22;
+}
+
+ul li:nth-child(3) {
+  color: #dc143c;
+}
+
+
+/* Sub-list */
+ul ul li:nth-child(1) {
+  color: #9400d3;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+/* Inner sub-list */
+ul ul ul li:nth-child(1) {
+  color: #ff8c00;
+  background-color: #fdf6e3;
+  border-radius: 10px;
+}
+ 
+
+/* Second violet item in sublist */
+ul ul li:nth-child(3) {
+  color: #9400d3;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+}
+
+
+/* Final main list item */
+ul li:last-child {
+  color: #2a52be;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  border-radius: 10px;
+  width: fit-content;
+  margin: auto;
+  background-color: #ffe6e6;
+  border: 4px solid #2a52be;
+}
