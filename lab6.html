@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+    <style>
+     
+        #flexParent{
+            border: 3px solid;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content:flex-end;
+        }
+
+        div div {
+            background-color:beige;
+            display: flex;
+            text-align: center;
+            align-items: center;
+    
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="flexParent">
+        <img src="https://picsum.photos/200/200?random=3" alt="">
+        <img src="https://picsum.photos/300/300?random=6" alt="">
+        <img src="https://picsum.photos/200/200?random=4" alt="">
+    </div>
+</body>
+</html>
