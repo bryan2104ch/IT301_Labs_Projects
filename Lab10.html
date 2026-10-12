@@ -7,8 +7,9 @@
 </head>
 <body>
     <script>
+        let answer;
         do{
-            let answer = prompt('Enter a number to calcuate a 10% tip.')
+            answer = prompt('Enter a number to calcuate a 10% tip.')
             if (Number(answer) == 0 || Number(answer) == ''){
                 document.write('Enter a valid bill amount greater than zero.')
             }
@@ -19,10 +20,10 @@
                 document.write('Input is invalid. Enter a valid number.')
             }
             else {
-                document.write('For a bill of $' + answer + ".00, the tip should be $" + Number(answer) * 0.10 + '.00');
+                document.write('For a bill of $' + Number(answer).toFixed(2) + ", the tip should be $" + (Number(answer) * 0.10).toFixed(2));
                 
             }
-        } while (false);
+        } while (Number(answer) <= 0 || isNaN(answer));
     </script>
 </body>
 </html>
