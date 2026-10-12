@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10</title>
+</head>
+<body>
+    <script>
+        do{
+            let answer = prompt('Enter a number to calcuate a 10% tip.')
+            if (Number(answer) == 0 || Number(answer) == ''){
+                document.write('Enter a valid bill amount greater than zero.')
+            }
+            else if (Number(answer) < 0){
+                document.write('Negative amounts are not allowed. Enter a valid amount.')
+            }
+            else if (isNaN(answer)){
+                document.write('Input is invalid. Enter a valid number.')
+            }
+            else {
+                document.write('For a bill of $' + answer + ".00, the tip should be $" + Number(answer) * 0.10 + '.00');
+                
+            }
+        } while (false);
+    </script>
+</body>
+</html>
