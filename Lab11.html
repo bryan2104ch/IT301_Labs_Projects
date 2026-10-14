@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Me!</title>
+    <style>
+        #box{
+            background-color: blue;
+            font-size: 1.2em;
+            color: white;
+            padding: 3px;
+            width: 200px;
+            border: 5px solid;
+
+        }
+
+        #box:hover{
+            cursor: pointer; 
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <button id="box">Click Me! &#128512;</button>
+
+    <script>
+        const box = document.getElementById('box');
+
+        function eventOne(event){
+            box.style.backgroundColor='yellow';
+            box.textContent = 'Do Not Click! 😠';
+            box.style.color='black';
+        }
+        function eventTwo(event){
+            box.style.backgroundColor='red';
+            box.textContent = 'Ouch! ';
+        }
+        function eventThree(event){
+            box.style.backgroundColor='lightgreen';
+            box.textContent = 'Phew!';
+        }
+        function eventFour(event){
+            box.style.backgroundColor='pink';
+            box.textContent = 'Double Trouble!';
+        }
+        function eventFive(event){
+            box.style.backgroundColor='lightblue';
+            box.textContent = 'I See You!';
+        }
+
+        box.addEventListener('mouseover', eventOne);
+        box.addEventListener('click', eventTwo);
+        box.addEventListener('mouseout', eventThree);
+        box.addEventListener('dblclick', eventFour);
+        box.addEventListener();
+
+
+    </script>
+</body>
+</html>
