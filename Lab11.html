@@ -19,13 +19,20 @@
             cursor: pointer; 
             text-decoration: underline;
         }
+
+        #event {
+            width: 75vw;
+            height: 100px;
+        }
     </style>
 </head>
 <body>
-    <button id="box">Click Me! &#128512;</button>
+    <button id="box">Click Me! &#128512; </button>
+    <div id="event">  </div>
 
     <script>
         const box = document.getElementById('box');
+        const event = document.getElementById('event');
 
         function eventOne(event){
             box.style.backgroundColor='yellow';
@@ -34,27 +41,30 @@
         }
         function eventTwo(event){
             box.style.backgroundColor='red';
-            box.textContent = 'Ouch! ';
+            box.textContent = 'Ouch! 🤕';
+            box.style.color='black';
         }
         function eventThree(event){
             box.style.backgroundColor='lightgreen';
-            box.textContent = 'Phew!';
+            box.textContent = 'Phew! 😌';
+            box.style.color='black';
         }
         function eventFour(event){
             box.style.backgroundColor='pink';
-            box.textContent = 'Double Trouble!';
+            box.textContent = 'Double Trouble! 🤩';
+            box.style.color='black';
         }
         function eventFive(event){
             box.style.backgroundColor='lightblue';
-            box.textContent = 'I See You!';
+            box.textContent = 'I See You! 👀';
+            box.style.color='black';
         }
 
         box.addEventListener('mouseover', eventOne);
         box.addEventListener('click', eventTwo);
         box.addEventListener('mouseout', eventThree);
         box.addEventListener('dblclick', eventFour);
-        box.addEventListener();
-
+        event.addEventListener('mousemove', eventFive);
 
     </script>
 </body>
