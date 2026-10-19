@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Name:</h1>
+    <form action="#">
+        <label for="name">What is your name?</label>
+        <input type="string" id="name">
+        <button type="button" id="submit1">Submit</button>
+    </form>
+    <p id="result1"></p>
+    <h1>Calculator:</h1>
+    <form action="#">
+        <label for="name">First Number:</label>
+        <input type="number" id="first">
+        <label for="name">Second Number:</label>
+        <input type="number" id="second">
+        <input type="radio" name="operation" value="Addition">Addition<br>
+        <input type="radio" name="operation" value="Subtraction">Subtraction<br>
+        <input type="radio" name="operation" value="Multiplication">Multiplication<br>
+        <input type="radio" name="operation" value="Division">Division<br>
+        <button type="button" id="submit2">Submit</button>
+    </form>
+    <p id="result2"></p>
+    <script>
+        const name = document.getElementById('name');
+        
+        document.getElementById('submit1').addEventListener('click', function(){
+            document.getElementById('result1').textContent = 'Hello ' + name.value; 
+        });
+
+        document.getElementById('submit2').addEventListener('click', function(){
+            const operation = document.querySelector('[name=operation]:checked');
+            
+            const a = document.getElementById('first');
+            const b = document.getElementById('second');
+
+            const add = (a, b) => a + b;
+            console.log(add(a,b));
+
+            const sub = (a, b) => a - b;
+            const mul = (a, b) => a * b;
+            const div = (a, b) => a / b;
+        });
+        
+    </script>
+</body>
+</html>
