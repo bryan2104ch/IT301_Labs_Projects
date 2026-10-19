@@ -38,13 +38,19 @@
             
             const a = document.getElementById('first');
             const b = document.getElementById('second');
+            let result;
 
-            const add = (a, b) => a + b;
-            console.log(add(a,b));
+            if (operation.value === 'Addition') {
+                result = Number(a.value) + Number(b.value);
+            } else if (operation.value === 'Subtraction') {
+                result = Number(a.value) - Number(b.value);
+            } else if (operation.value === 'Multiplication') {
+                result = Number(a.value) * Number(b.value);
+            } else if (operation.value === 'Division') {
+                result = Number(a.value) / Number(b.value);
+            }
 
-            const sub = (a, b) => a - b;
-            const mul = (a, b) => a * b;
-            const div = (a, b) => a / b;
+            document.getElementById('result2').textContent = 'Result: ' + result;
         });
         
     </script>
