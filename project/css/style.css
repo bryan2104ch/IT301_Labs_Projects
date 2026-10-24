@@ -1,0 +1,194 @@
+/* SHARED STYLES (used by ALL 5 pages) */
+
+
+/* Colors I am using for this site:
+  dark: #1d3c45;       
+  light: #fdfaf5;       
+  sand: #f2e8d9;     
+  accent: #b5441b;     
+  accent-hover: #8f3514;
+*/
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Fonts & Body */
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+  background-color: #fdfaf5;
+  min-height: 100vh;      
+  display: flex;             
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+h1, h2, h3 {
+  color: #1d3c45;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;    
+  display: block;
+}
+
+a {
+  color: #b5441b;
+}
+
+a:hover, a:focus {
+  color: #8f3514;
+}
+
+
+/* Header & Navigation */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: #1d3c45;
+  color: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 1000;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.logo:hover, .logo:focus {
+  color: #f2e8d9;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-bottom: 3px solid transparent;
+}
+
+.main-nav a:hover, .main-nav a:focus {
+  color: #ffffff;
+  border-bottom-color: #f2e8d9;
+}
+
+.main-nav a[aria-current="page"] {
+  border-bottom-color: #f0a37f;
+  font-weight: 700;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;  
+}
+
+/* Banner at top */
+.page-intro {
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background-color: #f2e8d9;
+  border-top: 5px solid #b5441b;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background-color: #b5441b;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 80px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:hover, .button:focus {
+  background-color: #8f3514;
+  color: #ffffff;
+}
+
+/* Footer */
+.footer {
+  background-color: #1d3c45;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.25rem 1rem;    
+  margin-top: auto;         
+}
+
+.footer p {
+  margin-bottom: 0.5rem;
+}
+
+/* Media query for smaller screens  */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .main-nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}

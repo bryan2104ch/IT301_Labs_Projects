@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic page info -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan a Trip | Elite Travel</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&amp;family=Playfair+Display:wght@700&amp;display=swap">
+
+  <!-- Shared styles for every page -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Styles only for this page -->
+  <link rel="stylesheet" href="css/plan.css">
+</head>
+<body>
+
+  <!-- HEADER (same on every page) -->
+  <header class="header">
+    <a class="logo" href="index.html">Elite Travel</a>
+    <nav class="main-nav" aria-label="Main menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html">Destinations</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="plan.html" aria-current="page">Plan a Trip</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- outside links -->
+    <section class="page-intro">
+      <h2>Helpful Booking Websites</h2>
+      <ul>
+        <p><a href="https://www.google.com/travel/flights" target="_blank" rel="noopener">Google Flights</a> &ndash; compare plane ticket prices</p>
+        <p><a href="https://www.expedia.com/" target="_blank" rel="noopener">Expedia</a> &ndash; cheap places to stay</p>
+        <p><a href="https://www.rome2rio.com/" target="_blank" rel="noopener">Rome2Rio</a> &ndash; find trains, buses, and ferries</p>
+      </ul>
+      <p>Not sure where to go yet? Look at our <a href="destinations.html">top destinations</a> first.</p>
+    </section>
+    
+    <!-- Planner form -->
+    <form class="trip-form" action="plan.html" method="get">
+
+      <!-- Name and email  -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" required minlength="1" autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+        </div>
+      </div>
+
+      <!-- Destination dropdown -->
+      <div class="form-group">
+        <label for="destination">Where do you want to go?</label>
+        <select id="destination" name="destination" required>
+          <option value="">--- Choose a destination ---</option>
+          <option value="kyoto">Tokyo, Japan</option>
+          <option value="lisbon">London, England</option>
+          <option value="banff">Los Angeles, USA</option>
+          <option value="capetown">Cape Town, South Africa</option>
+          <option value="marrakech">Rio de Janeiro, Brazil</option>
+        </select>
+      </div>
+
+      <!-- Date and number of travelers -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="start-date">Start Date </label>
+          <input type="date" id="start-date" name="start-date" required min="2026-01-01">
+        </div>
+        <div class="form-group">
+          <label for="travelers">Number of Travelers </label>
+          <input type="number" id="travelers" name="travelers" required min="1" max="20" value="1">
+        </div>
+      </div>
+
+      <button type="submit" class="button">Send My Trip Request</button>
+    </form>
+
+    
+  </main>
+
+  <!-- FOOTER (same on every page)-->
+  <footer class="footer">
+    <p>Elite Travel - By Bryan Chavez</p>
+    <p>IT 301 - Static Web Site</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Destinations | Elite Travel</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&amp;family=Playfair+Display:wght@700&amp;display=swap">
+
+  <!-- Shared styles for every page -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Styles only for this page -->
+  <link rel="stylesheet" href="css/destinations.css">
+</head>
+<body>
+
+  <!-- HEADER (same on every page) -->
+  <header class="header">
+    <a class="logo" href="index.html">Elite Travel</a>
+    <nav class="main-nav" aria-label="Main menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="destinations.html" aria-current="page">Destinations</a></li>
+        <li><a href="tips.html">Travel Tips</a></li>
+        <li><a href="photos.html">Photos</a></li>
+        <li><a href="plan.html">Plan a Trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- title  -->
+    <div class="page-intro">
+      <h1>Top Destinations</h1>
+      <p>Five places every traveler should see at least once. Each card has quick facts and a link to their official tourism website.</p>
+    </div>
+
+    <!-- Destination cards (CSS Grid) -->
+    <section class="card-grid" aria-label="Destination list">
+
+      <!-- Tokyo, Japan -->
+      <article class="card">
+        <img src="images/tokyo.jpg" alt="Tokyo skyline" width="800" height="500">
+        <span class="badge">Asia</span>
+        <div class="card-body">
+          <h2>Tokyo, Japan</h2>
+          <p>Discover historic temples, neon skyscrapers, and world-class dining.</p>
+          <ul class="card-facts">
+            <li><strong>Language:</strong> Japanese</li>
+            <li><strong>Currency:</strong> Japanese Yen (JPY)</li>
+            <li><strong>Best time:</strong> March to May</li>
+          </ul>
+          <a href="https://www.japan.travel/en/us/" target="_blank" rel="noopener">Visit the official Japan Tourism website</a>
+        </div>
+      </article>
+
+      <!-- London, England -->
+      <article class="card">
+        <img src="images/london.jpg" alt="The Tower of London" width="800" height="500">
+        <span class="badge">Europe</span>
+        <div class="card-body">
+          <h2>London, England</h2>
+          <p>Explore famous royal landmarks, top museums, and centuries of history.</p>
+          <ul class="card-facts">
+            <li><strong>Language:</strong> English</li>
+            <li><strong>Currency:</strong> British Pound (GBP)</li>
+            <li><strong>Best time:</strong> September to October</li>
+          </ul>
+          <a href="https://www.visitlondon.com/" target="_blank" rel="noopener">Visit the official Visit London Tourism website</a>
+        </div>
+      </article>
+
+      <!-- Los Angeles, USA -->
+      <article class="card">
+        <img src="images/losangeles.jpg" alt="The Los Angeles skyline" width="800" height="500">
+        <span class="badge">North America</span>
+        <div class="card-body">
+          <h2>Los Angeles, USA</h2>
+          <p>Relax on sunny coastlines and tour famous entertainment sights.</p>
+          <ul class="card-facts">
+            <li><strong>Language:</strong> English</li>
+            <li><strong>Currency:</strong> US Dollar (USD)</li>
+            <li><strong>Best time:</strong> June to September</li>
+          </ul>
+          <a href="https://www.discoverlosangeles.com/" target="_blank" rel="noopener">Visit the official Los Angeles Tourism website</a>
+        </div>
+      </article>
+
+      <!-- Cape Town, South Africa -->
+      <article class="card">
+        <img src="images/capetown.jpg" alt="Cape Town skyline" width="800" height="500">
+        <span class="badge">Africa</span>
+        <div class="card-body">
+          <h2>Cape Town, South Africa</h2>
+          <p>Experience Table Mountain, scenic beaches, and rich local history.</p>
+          <ul class="card-facts">
+            <li><strong>Language:</strong> English, Afrikaans, Xhosa</li>
+            <li><strong>Currency:</strong> South African Rand (ZAR)</li>
+            <li><strong>Best time:</strong> November to March</li>
+          </ul>
+          <a href="https://www.capetown.travel/" target="_blank" rel="noopener">Visit the official Cape Town Tourism website</a>
+        </div>
+      </article>
+
+      <!-- Rio de Janeiro, Brazil -->
+      <article class="card">
+        <img src="images/rio.jpg" alt="A view of the Christ the Redeemer statue and the skyline of Rio de Janeiro" width="800" height="500">
+        <span class="badge">South America</span>
+        <div class="card-body">
+          <h2>Rio de Janeiro, Brazil</h2>
+          <p>Enjoy famous tropical beaches, iconic mountain peaks, and lively samba culture.</p>
+          <ul class="card-facts">
+            <li><strong>Language:</strong> Portuguese</li>
+            <li><strong>Currency:</strong> Brazilian Real (BRL)</li>
+            <li><strong>Best time:</strong> December to March</li>
+          </ul>
+          <a href="https://riotur.rio/en/welcome/" target="_blank" rel="noopener">Visit the official Rio de Janeiro Tourism website</a>
+        </div>
+      </article>
+
+    </section>
+
+    <p>Head over to the <a href="plan.html">trip planner</a> to start planning.</p>
+
+  </main>
+
+  <!-- FOOTER (same on every page)-->
+  <footer class="footer">
+    <p>Elite Travel - By Bryan Chavez</p>
+    <p>IT 301 - Static Web Site</p>
+  </footer>
+</body>
+</html>

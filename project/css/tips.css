@@ -1,0 +1,44 @@
+/* styles ONLY for tips.html  */
+
+.tips-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+.tip-section {
+  margin-bottom: 2rem;
+}
+
+
+.steps {
+  padding-left: 2rem;
+}
+
+.steps li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* Sidebar */
+.sidebar {
+  background-color: #f2e8d9;
+  border-top: 5px solid #b5441b;
+  padding: 2rem;
+  align-self: start;
+}
+
+.sidebar img {
+  margin-bottom: 1rem;
+}
+
+.checklist {
+  padding-left: 2rem;
+}
+
+
+/* Media query for smaller screens  */
+@media (max-width: 768px) {
+  .tips-layout {
+    grid-template-columns: 1fr;
+  }
+}
