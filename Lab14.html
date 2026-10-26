@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises, fetch and APIs</title>
+</head>
+<body>
+    <h1>Lab 14: API</h1>
+
+    <script>
+        let img = document.createElement('img');
+        let button = document.createElement('button');
+        button.type = 'button'
+        button.textContent = 'Generate Profile'
+        let form = document.createElement('form');
+        form.action = '#';
+        form.appendChild(button);
+        document.body.appendChild(form);
+        const createImage = async()=>{
+            let p = await fetch('https://randomuser.me/api/')
+            p = await p.json();
+            // let src = data.results[0].gender;
+            // img.src = data.results[0].gender;
+            let src = p[0].picture;
+            img.src = p[0].picture;
+            img.alt = '';
+            console.log(src)
+            img.style.width = '50%'
+            img.style.height = '50%'
+            img.style.margin = '10px'
+            document.body.appendChild(img);     
+        }
+        button.addEventListener('click', createImage);
+        
+
+
+
+    </script>
+</body>
+</html>
