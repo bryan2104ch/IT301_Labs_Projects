@@ -9,33 +9,40 @@
     <h1>Lab 14: API</h1>
 
     <script>
-        let img = document.createElement('img');
         let button = document.createElement('button');
-        button.type = 'button'
-        button.textContent = 'Generate Profile'
+        button.type = 'button';
+        button.textContent = 'Generate Profile';
+
         let form = document.createElement('form');
         form.action = '#';
         form.appendChild(button);
         document.body.appendChild(form);
-        const createImage = async()=>{
-            let p = await fetch('https://randomuser.me/api/')
-            p = await p.json();
-            // let src = data.results[0].gender;
-            // img.src = data.results[0].gender;
-            let src = p[0].picture;
-            img.src = p[0].picture;
-            img.alt = '';
-            console.log(src)
-            img.style.width = '50%'
-            img.style.height = '50%'
-            img.style.margin = '10px'
-            document.body.appendChild(img);     
-        }
-        button.addEventListener('click', createImage);
-        
 
+        let card = document.createElement('div');
+        card.className = 'card';
 
+        let img = document.createElement('img');
+        let name = document.createElement('p');
+        let email = document.createElement('p');
+        let phone = document.createElement('p');
 
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(email);
+        card.appendChild(phone);
+        document.body.appendChild(card);
+
+        const createImg = async () => {
+            let p = await fetch('https://randomuser.me/api/');
+            let data = await p.json();
+
+            img.src = data.results[0].picture.large;
+            name.textContent = data.results[0].name.first + ' ' + data.results[0].name.last;
+            email.textContent = data.results[0].email;
+            phone.textContent = data.results[0].phone;
+        };
+
+        button.addEventListener('click', createImg);
     </script>
 </body>
 </html>
