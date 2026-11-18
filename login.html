@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in</title>
+</head>
+
+<body>
+    <form>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email">
+        <br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password">
+        <br><br>
+
+        <button type="button" id="log">Sign in</button>
+
+    </form>
+    <p id="message"></p>
+
+    <!-- Connects to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <!-- Accesses the database -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+    <!-- Handles user login -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-auth-compat.js"></script>
+
+    <script>
+        //firebase configuration
+
+
+        // Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyD3JWkaeQV1nyCXraT3O11dfK2vB6GDDKE",
+            authDomain: "studentdatabase-cb973.firebaseapp.com",
+            projectId: "studentdatabase-cb973",
+            storageBucket: "studentdatabase-cb973.firebasestorage.app",
+            messagingSenderId: "767210801284",
+            appId: "1:767210801284:web:f273c4ae80c72b93b79ad1",
+            measurementId: "G-E64BC65GT9"
+        };
+
+        // Connect to Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        // Connect to Firestore
+        const db = firebase.firestore();
+
+        const auth = firebase.auth();
+
+        // Get HTML elements
+        const emailInput = document.getElementById('email');
+        const passwordInput = document.getElementById('password');
+        const log = document.getElementById('log');
+        const message = document.getElementById('message');
+
+        log.addEventListener('click', async () => {
+            try {
+                const cred = await auth.signInWithEmailAndPassword(
+                    emailInput.value.trim(), passwordInput.value);
+                const uid = cred.user.uid;
+                console.table(cred)
+
+                const userDoc = await db.collection("Users").doc(uid).get();
+                const role = userDoc.data().role;
+                if (role === "faculty") {
+                    window.location.href = "lab17.html";
+                } else {
+                    window.location.href = "lab17.html";
+                }
+            } catch (error) {
+                message.textContent = "Login failed. Check your details.";
+            }
+        });
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
